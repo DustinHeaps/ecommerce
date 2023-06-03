@@ -17,11 +17,9 @@ jobs:
         uses: actions/setup-node@v3
         env:
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
-          STRIPE_SECRET_KEY: ${{ vars.STRIPE_SECRET_KEY }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
           STRIPE_WEBHOOK_SECRET: ${{ vars.STRIPE_WEBHOOK_SECRET }}
-      - run: echo ${{ env.STRIPE_SECRET_KEY}}
-      - run: echo ${{ vars.STRIPE_SECRET_KEY}}
-      - run: echo ${{ secrets.STRIPE_SECRET_KEY}}
+  
       - run: npm ci
       - run: npm test
       - run: npm run build
