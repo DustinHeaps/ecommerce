@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Setup Node
         uses: actions/setup-node@v3
-        run: 
+      - run: 
         
          env:
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
