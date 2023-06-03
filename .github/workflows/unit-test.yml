@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         env:
-          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
+          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
       - run: echo ${{ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}}
       - run: npm ci
       - run: npm test
