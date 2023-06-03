@@ -1,9 +1,6 @@
 name: Unit Tests
 
-
 on:
-
-
   push:
     branches: [main]
   pull_request:
@@ -19,6 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         env:
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY}}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET}}
       - run: npm ci
       - run: npm test
       - run: npm run build
