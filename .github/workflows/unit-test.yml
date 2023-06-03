@@ -17,3 +17,6 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+
+      env:
+          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: pk_test_51MxvvOFSwZ4WkgXshenpLVuBprW8vcvorfIRo1COZai6raqVxXHF8RRO0YFKcALyYD1kpqtRlCTI4w9e9oMX2igx00irBhOjNJ
