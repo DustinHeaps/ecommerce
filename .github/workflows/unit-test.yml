@@ -19,6 +19,9 @@ jobs:
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
           STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
           STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+      - run: echo ${{ env.STRIPE_SECRET_KEY}}
+      - run: echo ${{ vars.STRIPE_SECRET_KEY}}
+      - run: echo ${{ secrets.STRIPE_SECRET_KEY}}
       - run: npm ci
       - run: npm test
       - run: npm run build
