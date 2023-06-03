@@ -7,7 +7,7 @@
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "echo \"Navigate into an example and run the tests from there!\" && exit 1"
+    "test": "npm test"
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.3",
